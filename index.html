@@ -2,27 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=no, minimum-scale=1.0, maximum-scale=1.0">
-    <title>WebAR Mô Hình Chim - AR.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WebAR Mô Hình 3D Đầu Ngựa</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0px; overflow: hidden;">
-    
     <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false;">
       
       <a-assets>
-       <img id="my-image" src="1.png">
+        <a-asset-item id="horse-obj" src="Horse_full.OBJ"></a-asset-item>
+        <a-asset-item id="horse-mtl" src="Horse_full.mtl"></a-asset-item>
       </a-assets>
-      
-      <a-marker preset="hiro">
-        
-        <a-image src="#my-image" position="0 0 0" rotation="-90 0 0" width="2" height="2"></a-image>
 
+      <a-marker preset="hiro">
+        <a-obj-model src="#horse-obj" mtl="#horse-mtl" position="0 0 0" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-obj-model>
       </a-marker>
-      
+
       <a-entity camera></a-entity>
-      
     </a-scene>
   </body>
 </html>
