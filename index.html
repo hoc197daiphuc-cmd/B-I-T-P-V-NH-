@@ -12,19 +12,12 @@
     <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false;">
       
       <a-assets>
-        <a-asset-item id="bird-obj" src="./assets/12274_Lizard_v1_l2.obj"></a-asset-item>
-        <a-asset-item id="bird-mtl" src="./assets/12274_Lizard_v1_l2.mtl"></a-asset-item>
+       <img id="my-image" src="1.png">
       </a-assets>
       
       <a-marker preset="hiro">
         
-        <a-obj-model 
-          src="#bird-obj" 
-          mtl="#bird-mtl" 
-          position="0 0 0" 
-          scale="0.05 0.05 0.05" 
-          rotation="-90 0 0">
-        </a-obj-model>
+        <a-image src="#my-image" position="0 0 0" rotation="-90 0 0" width="2" height="2"></a-image>
 
       </a-marker>
       
