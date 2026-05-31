@@ -16,8 +16,14 @@
         <img id="leaf" src="maple_leaf.png">
       </a-assets>
 
-    <a-marker preset="hiro">
-        <a-obj-model src="#tree-obj" position="0 0 0" scale="0.02 0.02 0.02" rotation="0 0 0"></a-obj-model>
+   <a-marker preset="hiro">
+        <a-obj-model 
+          src="#tree-obj" 
+          position="0 0 0" 
+          scale="0.02 0.02 0.02" 
+          rotation="0 0 0"
+          material="src: #leaf">
+        </a-obj-model>
       </a-marker>
 
       <a-entity camera></a-entity>
